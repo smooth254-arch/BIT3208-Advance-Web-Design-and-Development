@@ -1,0 +1,23 @@
+# Local environment
+*.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# PHP temp files
+*.php~
+.phpintel/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Session and cache
+*.session
+/cache/
+/tmp/
+
+# Database backups
+*.sql.bak
