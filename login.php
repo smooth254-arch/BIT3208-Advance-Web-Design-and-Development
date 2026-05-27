@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $row['password'])) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['fullname'] = $row['fullname'];
-                header("Location: " . append_sid("Chichi.php"));
+                header("Location: " . append_sid("Chichi.php?success=loggedin"));
                 exit();
             } else {
                 $error = "Invalid password";
@@ -37,6 +37,11 @@ $formAction = htmlspecialchars($_SERVER['PHP_SELF']);
 if (isset($_REQUEST['sid'])) {
     $formAction .= '?sid=' . urlencode($_REQUEST['sid']);
 }
+
+$successMsg = '';
+if (isset($_GET['success']) && $_GET['success'] === 'registered') {
+    $successMsg = 'Registration successful! You can now log in.';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,10 +49,42 @@ if (isset($_REQUEST['sid'])) {
     <meta charset="UTF-8">
     <title>Login - Kibe Kicks and Fits</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .success-msg {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: slideDown 0.5s ease-out, slideUp 0.5s ease-out 2.5s forwards;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="form-container">
         <h1>Welcome Back</h1>
+        <?php if(!empty($successMsg)){ echo "<p class='success-msg'>" . htmlspecialchars($successMsg) . "</p>"; } ?>
         <?php if(!empty($error)){ echo "<p class='error-msg'>" . htmlspecialchars($error) . "</p>"; } ?>
         <form action="<?php echo $formAction; ?>" method="POST">
             <input type="email" name="email" placeholder="Email Address" required>

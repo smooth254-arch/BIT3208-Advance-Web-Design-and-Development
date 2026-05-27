@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $insert = $conn->prepare("INSERT INTO users (fullname, email, phone, password) VALUES (?, ?, ?, ?)");
       $insert->bind_param("ssss", $fullname, $email, $phone, $password);
       if ($insert->execute()) {
-        header('Location: login.php');
+        header('Location: login.php?success=registered');
         exit();
       } else {
         $error = "Error: " . htmlspecialchars($conn->error);
