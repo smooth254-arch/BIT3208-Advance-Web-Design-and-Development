@@ -12,12 +12,12 @@ $productQuery = $conn->query("SELECT name, price, image, description FROM produc
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KICKS COLLECTION</title>
+    <title>Kibe Kicks and Fits</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">KicksCollection</div>
+        <div class="logo">Kibe Kicks and Fits</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -29,7 +29,7 @@ $productQuery = $conn->query("SELECT name, price, image, description FROM produc
     </header>
 
     <section class="hero">
-        <h1 id="main-title">WELCOME TO KICKS CULTURE</h1>
+        <h1 id="main-title">WELCOME TO KIBE KICKS AND FITS</h1>
         <p class="subtitle">Hello <?php echo htmlspecialchars($_SESSION['fullname']); ?></p>
     </section>
 

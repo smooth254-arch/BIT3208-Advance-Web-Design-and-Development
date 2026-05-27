@@ -12,12 +12,12 @@ $productQuery = $conn->query("SELECT name, price, image, description FROM produc
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shop - KICKS COLLECTION</title>
+    <title>Shop - Kibe Kicks and Fits</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">KicksCollection</div>
+        <div class="logo">Kibe Kicks and Fits</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="<?php echo append_sid('index.php'); ?>">Home</a></li>

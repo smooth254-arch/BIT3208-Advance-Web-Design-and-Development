@@ -9,12 +9,12 @@ if (!isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact - KICKS COLLECTION</title>
+    <title>Contact - Kibe Kicks and Fits</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">KicksCollection</div>
+        <div class="logo">Kibe Kicks and Fits</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="<?php echo append_sid('index.php'); ?>">Home</a></li>
@@ -28,7 +28,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="form-container">
         <h1>Contact Us</h1>
         <p>Call or message us at <strong>+254717003737</strong>.</p>
-        <p>Email: <strong>support@kickscollection.local</strong></p>
+        <p>Email: <strong>support@kibekicks.local</strong></p>
         <p>Address: Nairobi, Kenya</p>
     </div>
 </body>
