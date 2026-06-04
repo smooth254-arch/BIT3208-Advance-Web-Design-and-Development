@@ -23,7 +23,7 @@ $error = $_GET['error'] ?? '';
 </head>
 <body>
     <div class="box">
-        <h2>Week 5 Login</h2>
+        <h2>Student Database Login</h2>
         <form method="POST" action="auth.php">
             <label>Username</label>
             <input type="text" name="username" required>
@@ -34,7 +34,7 @@ $error = $_GET['error'] ?? '';
         <?php if ($error): ?>
             <div class="error"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
-        <div class="hint">Use admin / secret123 or student / pass123.</div>
+        
     </div>
 </body>
 </html>
