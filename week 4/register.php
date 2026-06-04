@@ -1,5 +1,4 @@
 <?php
-// Simple registration form processing using POST and storing users in users.json
 $errors = [];
 $success = '';
 $username = '';

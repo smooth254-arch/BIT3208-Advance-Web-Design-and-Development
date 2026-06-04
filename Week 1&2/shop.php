@@ -9,27 +9,51 @@ if (!isset($_SESSION['user_id'])) {
 include_once __DIR__ . DIRECTORY_SEPARATOR . 'week 3' . DIRECTORY_SEPARATOR . 'backend-php' . DIRECTORY_SEPARATOR . 'node_client.php';
 
 $shoes = fetch_node_shoes();
-if (!is_array($shoes)) {
-    $shoes = [
-        [
-            'name' => 'Versache',
-            'price' => 'Ksh 4,500',
-            'image' => 'Versache.jpg',
-            'description' => 'Premium sneakers with bold styling.'
-        ],
-        [
-            'name' => 'Airforce 1 Custom',
-            'price' => 'Ksh 3,200',
-            'image' => 'Airforce 1 custome.jpg',
-            'description' => 'Custom Airforce 1 shoes with unique flair.'
-        ],
-        [
-            'name' => 'Classic Loafers',
-            'price' => 'Ksh 5,000',
-            'image' => 'Wet look shoes.jpg',
-            'description' => 'Comfortable loafers with timeless design.'
-        ]
-    ];
+$defaultShoes = [
+    [
+        'name' => 'Versache',
+        'price' => 'Ksh 4,500',
+        'image' => 'Wet look shoes.jpg',
+        'description' => 'Premium sneakers with bold styling.'
+    ],
+    [
+        'name' => 'Airforce 1 Custom',
+        'price' => 'Ksh 3,200',
+        'image' => 'Airforce 1 custome.jpg',
+        'description' => 'Custom Airforce 1 shoes with unique flair.'
+    ],
+    [
+        'name' => 'Classic Loafers',
+        'price' => 'Ksh 5,000',
+        'image' => 'Versache.jpg',
+        'description' => 'Comfortable loafers with timeless design.'
+    ]
+];
+
+if (!is_array($shoes) || count($shoes) === 0) {
+    $shoes = $defaultShoes;
+} else {
+    foreach ($shoes as &$shoe) {
+        if (!is_array($shoe)) {
+            continue;
+        }
+        if (!isset($shoe['image']) || trim((string)$shoe['image']) === '') {
+            $name = isset($shoe['name']) ? strtolower($shoe['name']) : '';
+            if (strpos($name, 'versache') !== false) {
+                $shoe['image'] = 'Wet look shoes.jpg';
+            } elseif (strpos($name, 'airforce') !== false) {
+                $shoe['image'] = 'Airforce 1 custome.jpg';
+            } elseif (strpos($name, 'classic') !== false || strpos($name, 'loafer') !== false) {
+                $shoe['image'] = 'Versache.jpg';
+            } else {
+                $shoe['image'] = 'sneaker-852-x-1280-background-7ot45s84y2sycgoh.jpg';
+            }
+        }
+        if (!isset($shoe['description']) || trim((string)$shoe['description']) === '') {
+            $shoe['description'] = 'High-quality kicks for the best fit.';
+        }
+    }
+    unset($shoe);
 }
 
 function image_url($image) {

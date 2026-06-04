@@ -1,5 +1,4 @@
 <?php
-// Contact form processing using POST and storing messages in contacts.json
 $errors = [];
 $success = '';
 $name = '';
