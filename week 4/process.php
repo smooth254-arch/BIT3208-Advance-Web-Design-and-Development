@@ -1,5 +1,4 @@
 <?php
-// Simple PHP processing page for Week 4
 $result = '';
 $input = '';
 $notes = '';

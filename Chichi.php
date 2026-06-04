@@ -10,6 +10,7 @@ include_once __DIR__ . DIRECTORY_SEPARATOR . 'week 3' . DIRECTORY_SEPARATOR . 'b
 
 $shoes = fetch_node_shoes();
 if (!is_array($shoes)) {
+    // Fallback shoes data. Update the 'image' names below or add matching image files to the project root to change the pictures.
     $shoes = [
         [
             'name' => 'Versache',
