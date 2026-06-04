@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kicks Demo</title>
+    <style>body{font-family:system-ui,Segoe UI,Roboto;padding:20px} .shoe{border:1px solid #ddd;padding:10px;margin:10px 0}</style>
+  </head>
+  <body>
+    <h1>Kicks - Frontend Demo</h1>
+    <div id="list">Loading…</div>
+    <script>
+      async function load(){
+        try{
+          const res = await fetch('http://localhost:3000/api/shoes');
+          const data = await res.json();
+          const container = document.getElementById('list');
+          container.innerHTML = data.map(s=>`<div class="shoe"><h3>${s.name}</h3><p>${s.price}</p></div>`).join('');
+        }catch(e){
+          document.getElementById('list').textContent = 'Failed to load data.';
+        }
+      }
+      load();
+    </script>
+  </body>
+</html>

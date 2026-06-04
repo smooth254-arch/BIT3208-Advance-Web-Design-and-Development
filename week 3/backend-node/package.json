@@ -1,0 +1,14 @@
+{
+  "name": "kicks-backend-node",
+  "version": "1.0.0",
+  "description": "Simple Express API for Kicks Collection (week 3)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "mysql2": "^3.22.4"
+  }
+}
