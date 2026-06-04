@@ -14,6 +14,16 @@ $display = $name !== '' ? ucwords(strtolower($name)) : 'Guest';
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+  <div class="navbar">
+    <div class="logo">Week 4</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="welcome.php">Welcome POST</a></li>
+      <li><a href="register.php">Register</a></li>
+      <li><a href="login.php">Login</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+  </div>
     <div style="max-width:900px;margin:60px auto;text-align:center;padding:20px;">
         <h1 id="main-title">Welcome <?php echo htmlspecialchars($display); ?></h1>
         <?php if ($_SERVER['REQUEST_METHOD'] !== 'POST'): ?>

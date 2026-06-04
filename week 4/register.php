@@ -48,6 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+  <div class="navbar">
+    <div class="logo">Week 4</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="welcome.php">Welcome POST</a></li>
+      <li><a href="register.php">Register</a></li>
+      <li><a href="login.php">Login</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+  </div>
   <div class="form-container">
     <h1>Register</h1>
     <?php if ($success): ?>

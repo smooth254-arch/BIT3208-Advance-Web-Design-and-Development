@@ -6,12 +6,25 @@
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
-    <div style="max-width:800px;margin:60px auto;text-align:center;padding:20px;">
-      <h2>Week 4 — POST welcome demo</h2>
-      <form method="POST" action="welcome.php" style="margin-top:20px;">
-        <input name="fullname" placeholder="Enter your full name" style="padding:10px;border-radius:6px;border:1px solid #ccc;width:260px;">
-        <button type="submit" class="button">Show Welcome</button>
-      </form>
+    <div class="navbar">
+      <div class="logo">Week 4</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome.php">Welcome POST</a></li>
+        <li><a href="register.php">Register</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+    <div style="max-width:900px;margin:60px auto;padding:20px;">
+      <h2 style="text-align:center;">Week 4 Forms Menu</h2>
+      <p style="text-align:center;margin-bottom:30px;">Quick access to the welcome demo, registration, login, and contact forms.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <a class="button" href="welcome.php" style="display:block;text-align:center;">Welcome POST Demo</a>
+        <a class="button" href="register.php" style="display:block;text-align:center;">Register</a>
+        <a class="button" href="login.php" style="display:block;text-align:center;">Login</a>
+        <a class="button" href="contact.php" style="display:block;text-align:center;">Contact</a>
+      </div>
     </div>
   </body>
 </html>
