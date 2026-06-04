@@ -56,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="contact.php">Contact</a></li>
+      <li><a href="process.php">Process</a></li>
     </ul>
   </div>
   <div class="form-container">

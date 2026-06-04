@@ -22,6 +22,7 @@ $display = $name !== '' ? ucwords(strtolower($name)) : 'Guest';
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="contact.php">Contact</a></li>
+      <li><a href="process.php">Process</a></li>
     </ul>
   </div>
     <div style="max-width:900px;margin:60px auto;text-align:center;padding:20px;">
