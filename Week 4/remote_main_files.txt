@@ -1,0 +1,49 @@
+Advance Web Design and Dvt.docx
+Week 1&2/.gitignore
+Week 1&2/Airforce 1 custome.jpg
+Week 1&2/Chichi.php
+Week 1&2/README_EDIT.md
+Week 1&2/Versache.jpg
+Week 1&2/Wet look shoes.jpg
+Week 1&2/WhatsApp Image 2024-11-13 at 08.20.18_02ffc443.jpg
+Week 1&2/WhatsApp Image 2024-11-21 at 08.12.08_472b1aec.jpg
+Week 1&2/Zaza.jpg
+Week 1&2/contact.php
+Week 1&2/db.php
+Week 1&2/homepage.php
+Week 1&2/index.php
+Week 1&2/login.php
+Week 1&2/logout.php
+Week 1&2/register.php
+Week 1&2/session.php
+Week 1&2/shop.php
+Week 1&2/sneaker-852-x-1280-background-7ot45s84y2sycgoh.jpg
+Week 1&2/style.css
+Week 5/auth.php
+Week 5/db.php
+Week 5/fetch.php
+Week 5/index.php
+Week 5/login.php
+Week 5/logout.php
+week 3/README.md
+week 3/backend-node/.env.example
+week 3/backend-node/.gitignore
+week 3/backend-node/package-lock.json
+week 3/backend-node/package.json
+week 3/backend-node/server.js
+week 3/backend-php/api.php
+week 3/backend-php/config.php
+week 3/backend-php/node_client.php
+week 3/frontend/index.html
+week 3/test_php_fetch.php
+week 4/auth_items.php
+week 4/auth_login.php
+week 4/auth_logout.php
+week 4/contact.php
+week 4/contacts.json
+week 4/index.html
+week 4/login.php
+week 4/process.php
+week 4/register.php
+week 4/users.json
+week 4/welcome.php

@@ -77,8 +77,11 @@ button {
   padding: 14px 16px;
   margin-bottom: 10px;
   border-radius: 12px;
-  color: #264e8415;
-  transition: background 0.2s ease, transform 0.2s ease;
+  color: #ffffff;
+  transition: background 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
 }
 
 .btn-group {
@@ -89,9 +92,14 @@ button {
 }
 
 .sidebar nav a:hover,
-.sidebar nav a.active {
-  background: #1f2937;
-  transform: translateX(2px);
+.sidebar nav a.active,
+.sidebar nav a:focus,
+.sidebar nav a:active {
+  background: transparent;
+  color: #ffffff;
+  transform: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .content {
